@@ -5,6 +5,8 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './redux/store'
 import {Provider} from 'react-redux'
+import {disableReactDevTools} from `@fvilers/disable-react-devtools`
+if(process.env.NODE_ENV===`production`) disableReactDevTools()
 
 ReactDOM.render(
   <Provider store={store}>
